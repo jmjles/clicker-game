@@ -30,6 +30,7 @@ export default function App() {
     id: "3",
     alt: "Pumpkin Character Pic"
   });
+  const [selectedChar,setSelectedChar] = useState(ghoul)
   const [characters,setCharacters]= useState([ghoul,ghost,pumpkin])
 
   return (
