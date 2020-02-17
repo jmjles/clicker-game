@@ -1,9 +1,9 @@
 import React from "react";
 import { Typography as Font, Grid, Button } from "@material-ui/core";
-import {openCharacterSelection} from '../misc/AnimeGallery'
+import { openCharacterSelection } from "../misc/AnimeGallery";
 export default function CharacterSelection({ characters, setSelectedChar }) {
   return (
-    <div className="CharacterSelect" id="characterSelect">
+    <div className="CharacterSelect">
       <Font variant="h2" align="center" className="two">
         Character Selection
       </Font>
@@ -30,7 +30,7 @@ export default function CharacterSelection({ characters, setSelectedChar }) {
           </Grid>
         ))}
       </Grid>
-      <Button variant="contained" onClick={()=>openCharacterSelection(false)}>
+      <Button variant="contained" onClick={() => openCharacterSelection(false)}>
         <Font variant="body1">Back</Font>
       </Button>
     </div>

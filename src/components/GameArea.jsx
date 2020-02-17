@@ -6,7 +6,7 @@ export default function GameArea({
   increment
 }) {
   return (
-    <div className="gameArea">
+    <div className="GameArea">
       <figure>
         <img
           id="gpicmain"
