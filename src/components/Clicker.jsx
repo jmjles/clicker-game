@@ -2,6 +2,7 @@ import React from 'react'
 import {Paper,Fab,Typography as Font} from '@material-ui/core'
 import GameArea from './GameArea'
 import CharacterSelection from './CharacterSelection'
+import About from './About';
 export default function Clicker({selectedChar,increment,characters}) {
     return (
       <div>
@@ -9,6 +10,7 @@ export default function Clicker({selectedChar,increment,characters}) {
           <Fab id="i">
             ?
           </Fab>
+          <About/>
           <Font align="center" variant="h1">
             Clicker Game
           </Font>

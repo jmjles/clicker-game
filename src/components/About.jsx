@@ -1,6 +1,36 @@
 import React from 'react'
-
+import {Typography as Font, Button} from '@material-ui/core' 
 export default function About() {
+      const characterTitles = [
+        {
+          title: "Beginner:",
+          count: "10"
+        },
+        {
+          title: "Amatuer:",
+          count: "30"
+        },
+        {
+          title: "Adventurer:",
+          count: "60"
+        },
+        {
+          title: "Thumping Rabbit:",
+          count: "100"
+        },
+        {
+          title: "Pro:",
+          count: "150"
+        },
+        {
+          title: "Tapping Ninja:",
+          count: "200"
+        },
+        {
+          title: "GodLike:",
+          count: "300"
+        }
+      ];
     return (
       <div className='gameInfo' id="gameInfo">
         <Font variant="h1" align="center">
@@ -8,22 +38,22 @@ export default function About() {
         </Font>
         <table style={{ margin: "auto" }}>
           <tbody>
-            {characterTitles.map(config => (
+            {characterTitles.map(({title,count}) => (
               <tr
-                key={config.title}
+                key={title}
                 style={{ marginTop: "1rem", marginBottom: "1rem" }}
               >
                 <td id="Ltitle" style={{ padding: ".5rem" }}>
-                  <Font variant="body1">{config.title}</Font>
+                  <Font variant="body1">{title}</Font>
                 </td>
                 <td style={{ padding: ".5rem" }}>
-                  <Font variant="body1">{config.count}</Font>
+                  <Font variant="body1">{count}</Font>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
-        <Button variant="contained" onClick={gameInfoAni} className="gBack">
+        <Button variant="contained" className="gBack">
           <Font variant="button">Back</Font>
         </Button>
       </div>
