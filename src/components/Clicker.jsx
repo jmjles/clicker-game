@@ -1,6 +1,7 @@
 import React from 'react'
 import {Paper,Fab,Typography as Font} from '@material-ui/core'
-export default function Clicker() {
+import GameArea from './GameArea'
+export default function Clicker({selectedChar,increment}) {
     return (
       <div>
         <Paper elevation={0} className='headerPaper'>
@@ -11,6 +12,7 @@ export default function Clicker() {
             Clicker Game
           </Font>
         </Paper>
+        <GameArea selectedChar={selectedChar} increment={increment}/>
       </div>
     );
 }
