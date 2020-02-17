@@ -58,7 +58,7 @@ export default function App() {
   return (
     <Clicker
       characters={[ghost,ghoul,pumpkin]}
-      selectedChar={selectedChar}
+      selectedChar={[selectedChar,setSelectedChar]}
       increment={increment}
     />
   );

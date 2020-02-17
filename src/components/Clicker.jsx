@@ -1,7 +1,8 @@
 import React from 'react'
 import {Paper,Fab,Typography as Font} from '@material-ui/core'
 import GameArea from './GameArea'
-export default function Clicker({selectedChar,increment}) {
+import CharacterSelection from './CharacterSelection'
+export default function Clicker({selectedChar,increment,characters}) {
     return (
       <div>
         <Paper elevation={0} className='headerPaper'>
@@ -13,6 +14,7 @@ export default function Clicker({selectedChar,increment}) {
           </Font>
         </Paper>
         <GameArea selectedChar={selectedChar} increment={increment}/>
+        <CharacterSelection setSelectedChar={selectedChar[1]} characters={characters}/>
       </div>
     );
 }
