@@ -3,11 +3,12 @@ import {Paper,Fab,Typography as Font} from '@material-ui/core'
 import GameArea from './GameArea'
 import CharacterSelection from './CharacterSelection'
 import About from './About';
+import {openGameInfo} from '../misc/AnimeGallery'
 export default function Clicker({selectedChar,increment,characters}) {
     return (
       <div>
         <Paper elevation={0} className='headerPaper'>
-          <Fab id="i">
+          <Fab id="i" onClick={()=>openGameInfo(true)}>
             ?
           </Fab>
           <About/>

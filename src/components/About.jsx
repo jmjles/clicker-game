@@ -1,5 +1,6 @@
 import React from 'react'
 import {Typography as Font, Button} from '@material-ui/core' 
+import {openGameInfo} from '../misc/AnimeGallery'
 export default function About() {
       const characterTitles = [
         {
@@ -32,8 +33,8 @@ export default function About() {
         }
       ];
     return (
-      <div className='gameInfo' id="gameInfo">
-        <Font variant="h1" align="center">
+      <div className='GameInfo'>
+        <Font variant="h1" align="center" >
           Levels
         </Font>
         <table style={{ margin: "auto" }}>
@@ -53,7 +54,7 @@ export default function About() {
             ))}
           </tbody>
         </table>
-        <Button variant="contained" className="gBack">
+        <Button variant="contained" className="gBack" onClick={()=>openGameInfo(false) }>
           <Font variant="button">Back</Font>
         </Button>
       </div>
