@@ -22,7 +22,10 @@ export default function CharacterSelection({ characters, setSelectedChar }) {
               id="gpic"
               src={character.url}
               alt={character.alt}
-              onClick={() => setSelectedChar(character)}
+              onClick={
+                (() => {setSelectedChar(character)
+                  openCharacterSelection(false)})
+              }
             />
             <Font variant="h4" align="center">
               {character.level}

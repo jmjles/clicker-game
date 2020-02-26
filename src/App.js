@@ -11,7 +11,6 @@ export default function App() {
     level: "Noob",
     url: ghoulPic,
     clicks: 0,
-    id: "1",
     alt: "Ghoul Character Pic"
   });
   const [ghost, setGhost] = useState({
@@ -19,7 +18,6 @@ export default function App() {
     level: "Noob",
     url: ghostPic,
     clicks: 0,
-    id: "2",
     alt: "Ghost Character Pic"
   });
   const [pumpkin, setPumpkin] = useState({
@@ -27,38 +25,75 @@ export default function App() {
     level: "Noob",
     url: pumpkinPic,
     clicks: 0,
-    id: "3",
     alt: "Pumpkin Character Pic"
   });
   const [selectedChar, setSelectedChar] = useState(ghoul);
+
+  const lvlUp = clicks => {
+    return clicks < 10
+      ? "Noob"
+      : clicks < 30
+      ? "Beginner"
+      : clicks < 60
+      ? "Amatuer"
+      : clicks < 100
+      ? "Adventurer"
+      : clicks < 150
+      ? "Thumping Rabbit"
+      : clicks < 200
+      ? "Pro"
+      : clicks < 300
+      ? "Tapping Ninja"
+      : "Godlike";
+  };
   const increment = name => {
     switch (name) {
       case "Ghoul":
         setSelectedChar({
           ...selectedChar,
-          clicks: (selectedChar.clicks += 1)
+          clicks: (selectedChar.clicks += 1),
+          level: lvlUp(selectedChar.clicks)
         });
-        return setGhoul({ ...ghoul, clicks: (ghoul.clicks += 1) });
+        setGhoul({
+          ...ghoul,
+          clicks: (ghoul.clicks += 1),
+          level: lvlUp(ghoul.clicks)
+        });
+        break;
       case "Ghost":
         setSelectedChar({
           ...selectedChar,
-          clicks: (selectedChar.clicks += 1)
+          clicks: (selectedChar.clicks += 1),
+          level: lvlUp(selectedChar.clicks)
         });
-        return setGhost({ ...ghost, clicks: (ghost.clicks += 1) });
+        setGhost({
+          ...ghost,
+          clicks: (ghost.clicks += 1),
+          level: lvlUp(ghost.clicks)
+        });
+        break;
       case "Pumpkin":
         setSelectedChar({
           ...selectedChar,
-          clicks: (selectedChar.clicks += 1)
+          clicks: (selectedChar.clicks += 1),
+          level: lvlUp(selectedChar.clicks)
         });
-        return setPumpkin({ ...pumpkin, clicks: (pumpkin.clicks += 1) });
+        setPumpkin({
+          ...pumpkin,
+          clicks: (pumpkin.clicks += 1),
+          level: lvlUp(pumpkin.clicks)
+        });
+        break;
       default:
         console.log("Unkown Character");
+        break;
     }
   };
+
   return (
     <Clicker
-      characters={[ghost,ghoul,pumpkin]}
-      selectedChar={[selectedChar,setSelectedChar]}
+      characters={[ghost, ghoul, pumpkin]}
+      selectedChar={[selectedChar, setSelectedChar]}
       increment={increment}
     />
   );
