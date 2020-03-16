@@ -1,6 +1,6 @@
 import React from "react";
-import { Typography as Font, Button } from "@material-ui/core";
-import {openCharacterSelection} from '../misc/AnimeGallery'
+import { Typography as Font, Button, Grid } from "@material-ui/core";
+import { openCharacterSelection } from "../misc/AnimeGallery";
 export default function GameArea({
   selectedChar: [{ url, alt, name, clicks, level }],
   increment
@@ -16,11 +16,21 @@ export default function GameArea({
         />
         <figcaption>
           <Font variant="h2">{name}</Font>
-          <Font variant="h3">{clicks}</Font>
-          <Font variant="h4">{level}</Font>
+          <Grid container justify="space-around" alignItems="baseline">
+            <Grid item>
+              <Font variant="h3">{clicks}</Font>
+            </Grid>
+            <Grid item>
+              <Font variant="h3">{level}</Font>
+            </Grid>
+          </Grid>
         </figcaption>
       </figure>
-      <Button variant="contained" onClick={()=>openCharacterSelection(true)}>
+      <Button
+        variant="contained"
+        onClick={() => openCharacterSelection(true)}
+        color="secondary"
+      >
         <Font variant="button">Change Character</Font>
       </Button>
     </div>

@@ -1,5 +1,5 @@
 # Clicker Game
-[Demo](https://clicker-game-jmjles.herokuapp.com/)
+[Demo](https://clicker-game.jesusmj.com/)
 ---
 
 ## About
