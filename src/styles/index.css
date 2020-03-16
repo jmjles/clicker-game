@@ -4,6 +4,14 @@
   background-color: #414c51;
 }
 
+.AppRoot nav div div > div:last-child {
+  margin-left: auto;
+}
+
+.AppRoot nav a {
+  margin-left: auto;
+}
+
 .AppRoot h2 {
   font-size: 42px;
 }
