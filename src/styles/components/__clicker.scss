@@ -4,6 +4,16 @@
     margin-bottom: 0.5rem;
     padding: 0.5rem 0;
     background-color: $navColor;
+    div{
+      div{
+        >div:last-child{
+          margin-left: auto;
+        }
+      }
+    }
+    a {
+      margin-left: auto;
+    }
   }
   h2{
     font-size: 42px;

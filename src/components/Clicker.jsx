@@ -9,19 +9,23 @@ import {
 import GameArea from "./GameArea";
 import CharacterSelection from "./CharacterSelection";
 import About from "./About";
+import logo from "../assets/pics/logo.png";
 import { openGameInfo } from "../misc/AnimeGallery";
 export default function Clicker({ selectedChar, increment, characters }) {
   return (
     <div className="AppRoot">
       <Paper square elevation={5} component="nav">
         <Container maxWidth="md">
-          <Grid container alignContent="center" justify="flex-end">
+          <Grid container alignItems="center">
+            <Grid item>
+              <img src={logo} alt="Jesus MJ Logo" />
+            </Grid>
             <Grid item>
               <Button
                 component="a"
                 href="https://jesusmj.com"
                 variant="contained"
-                color='primary'
+                color="primary"
               >
                 <Font variant="button">Back Home</Font>
               </Button>
@@ -50,10 +54,10 @@ export default function Clicker({ selectedChar, increment, characters }) {
               />
             </Grid>
             <Grid item>
-              <Button 
-              onClick={() => openGameInfo(true)} 
-              variant="contained"
-              color='secondary'
+              <Button
+                onClick={() => openGameInfo(true)}
+                variant="contained"
+                color="secondary"
               >
                 <Font variant="button">How To Play</Font>
               </Button>
