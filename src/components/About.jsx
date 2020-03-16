@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography as Font, Button } from "@material-ui/core";
+import { Typography as Font, Button, Paper } from "@material-ui/core";
 import { openGameInfo } from "../misc/AnimeGallery";
 export default function About() {
   const characterTitles = [
@@ -33,11 +33,11 @@ export default function About() {
     }
   ];
   return (
-    <div className="GameInfo">
-      <Font variant="h1" align="center">
+    <Paper className="GameInfo" square>
+      <Font variant="h2" align="center" component='h1'>
         Levels
       </Font>
-      <table style={{ margin: "auto" }}>
+      <table>
         <tbody>
           {characterTitles.map(({ title, count }) => (
             <tr key={title} style={{ marginTop: "1rem", marginBottom: "1rem" }}>
@@ -55,9 +55,10 @@ export default function About() {
         variant="contained"
         className="gBack"
         onClick={() => openGameInfo(false)}
+        color='secondary'
       >
         <Font variant="button">Back</Font>
       </Button>
-    </div>
+    </Paper>
   );
 }

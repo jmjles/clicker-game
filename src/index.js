@@ -8,7 +8,23 @@ import {
   StylesProvider,
   createMuiTheme
 } from "@material-ui/core";
-const theme = createMuiTheme({});
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#252628"
+    },
+    secondary: {
+      main: "#598288"
+    },
+    background: {
+      paper: "#DCE7E0",
+      default: "#B7CBCA"
+    },
+    text: {
+      primary: "#181C20"
+    }
+  }
+});
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <CssBaseline>

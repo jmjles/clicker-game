@@ -1,54 +1,104 @@
-.HeaderPaper {
-  text-align: right;
-  margin-top: 30px;
+.AppRoot nav {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0;
+  background-color: #414c51;
 }
 
-.HeaderPaper button {
-  float: right;
+.AppRoot h2 {
+  font-size: 42px;
 }
 
-.GameInfo {
+.AppRoot h3 {
+  font-size: 38px;
+}
+
+@media (min-width: 500px) {
+  .AppRoot h2 {
+    font-size: 52px;
+  }
+  .AppRoot h3 {
+    font-size: 42px;
+  }
+}
+
+.AppRoot .Root {
+  text-align: center;
+}
+
+.AppRoot .Root article {
+  background: none;
+}
+
+.AppRoot .Root article .GameInfo {
   width: 0px;
   overflow: hidden;
   z-index: 99;
   height: 100%;
   position: absolute;
-  background-color: lightgrey;
   top: 0;
   left: 0;
   text-align: center;
 }
 
-.GameArea {
-  text-align: center;
+.AppRoot .Root article .GameInfo table {
+  margin: auto;
+  text-align: left;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
 }
 
-.GameArea img {
-  width: 300px;
+.AppRoot .Root article .GameInfo table tr {
+  border-bottom: #B7CBCA 3px solid;
 }
 
-.CharacterSelect {
+.AppRoot .Root article .GameInfo table td:first-child {
+  border-right: #B7CBCA 3px solid;
+}
+
+.AppRoot .Root article .GameArea img {
+  width: 100%;
+}
+
+.AppRoot .Root article .CharacterSelect {
+  z-index: 99;
   width: 0px;
   height: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
   position: absolute;
   top: 0;
   left: 0;
-  text-align: center;
-  background-color: lightgrey;
 }
 
-.CharacterSelect img {
-  width: 90%;
+.AppRoot .Root article .CharacterSelect h3 {
+  margin: 1rem 0;
+}
+
+.AppRoot .Root article .CharacterSelect #charDiv {
   height: 100%;
 }
 
-.CharacterSelect div {
-  margin-bottom: 3rem;
+.AppRoot .Root article .CharacterSelect #charDiv h3 {
+  margin: 0;
 }
 
-.CharacterSelect div div {
-  margin: 3rem;
-  padding: 2rem;
+.AppRoot .Root article .CharacterSelect #charDiv img {
+  width: 100%;
+  height: 200px;
+}
+
+@media (min-width: 800px) {
+  .AppRoot .Root article .CharacterSelect #charDiv img {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .AppRoot .Root article .CharacterSelect #charDiv img {
+    height: 350px;
+  }
+}
+
+.AppRoot .Root article .CharacterSelect button {
+  margin: 1rem 0;
 }
 /*# sourceMappingURL=index.css.map */

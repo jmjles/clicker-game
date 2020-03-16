@@ -7,7 +7,7 @@ export const openGameInfo = open => {
     targets: ".GameInfo",
     width,
     easing: "linear",
-    duration: 1000
+    duration: 300
   });
 };
 

@@ -85,7 +85,7 @@ export default function App() {
         });
         break;
       default:
-        console.log("Unkown Character");
+        console.log("Unknown Character");
         break;
     }
   };
